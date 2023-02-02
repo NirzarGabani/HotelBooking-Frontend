@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta name="viewport" content="with=device-width, initial-scale=1.0">
+	<title>Hotel</title>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://kit.fontawesome.com/b99e675b6e.js"></script>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;800&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link
+		href="https://fonts.googleapis.com/css2?family=Lato&family=Lobster&family=Open+Sans&family=Oswald&display=swap"
+		rel="stylesheet">
+</head>
+
+<body>
+	<section class="header">
+		<div class="content_home"></div>
+		<!-- <div class="background-image"></div> -->
+		<!-- <div class="content_data"> -->
+		<nav>
+			<a href="Hotel.html"><img src="images/logo.jpeg" alt></a>
+			<div class="nav-links" id="navLinks">
+				<i class="fa fa-times" onclick="hideMenu()"></i>
+				<ul>
+					<li><a href="Hotel.html">Home</a></li>
+					<li><a href="about.html">About Us</a></li>
+					<li><a href="contact.html">Contact Us</a></li>
+					<li><a href="gallery.html">Gallery</a></li>
+				</ul>
+			</div>
+			<i class="fa fa-bars" onclick="showMenu()"></i>
+		</nav>
+
+		<!-- <div class="img_home"></div> -->
+		<div class="text-box">
+			<h1>Hotel CheckIn </h1>
+			<p>Spend Quality Holidays With Us</p>
+			<div class="wrapper">
+				<div class="search-input">
+					<a href="" target="_blank" hidden></a>
+					<input type="text" placeholder="search your destination..">
+					<div class="autocom-box">
+						<!-- here list are inserted from javascript -->
+					</div>
+					<div class="icon"><i class="fas fa-search"></i></div>
+				</div>
+			</div>
+
+			<script src="E:\html\suggestions.js"></script>
+			<script src="E:\html\script.js"></script>
+		</div>
+
+
+
+		<!-- </div> -->
+
+	</section>
+
+
+	<!-- SOME EXAMPLE-->
+	<section class="example">
+		<h1>Find Your Best Option.</h1>
+		<P>Find and choose best option for you requirement.Book your hotel now.</P>
+
+
+	</section>
+
+	<!--javasccript for toggle menu-->
+	<script>
+		var navLinks = document.getElementById("navLinks");
+		function showMenu() {
+			navLinks.style.right = "0";
+		}
+		function hideMenu() {
+			navLinks.style.right = "-200px";
+		}
+	</script>
+
+	<section class="hotels">
+		<div class="container1">
+			<h5 class="section-head">
+				<span class="heading">Explore</span>
+				<span class="sub-heading">Our beautiful hotels</span>
+			</h5>
+			<div class="grid">
+				<div class="grid-item featured-hotels">
+					<img src="images/hotel_astro_resort.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Astro Hotel</h5>
+					<span class="hotel-price">From: $200/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient ">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels">
+					<img src="images/hotel_the_enchanted_garden.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Enchanted Garden</h5>
+					<span class="hotel-price">From: $300/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels">
+					<img src="images/hotel_the_paradise.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">The Paradise</h5>
+					<span class="hotel-price">From: $350/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels">
+					<img src="images/hotel5.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">The Utopia</h5>
+					<span class="hotel-price">From: $250/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels">
+					<img src="images/hotel6.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">TGB</h5>
+					<span class="hotel-price">From: $300/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+			</div>
+
+			<div class="grid1">
+				<div class="grid-item featured-hotels1">
+					<img src="images/hotel7.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Crown Plaza</h5>
+					<span class="hotel-price">From: $250/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels1">
+					<img src="images/hotel8.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Lemon Tree Hotel</h5>
+					<span class="hotel-price">From: $250/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels1">
+					<img src="images/hotel9.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Marriott Hotel</h5>
+					<span class="hotel-price">From: $250/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels1">
+					<img src="images/hotel10.jpeg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Central Beacon Hotel</h5>
+					<span class="hotel-price">From: $250/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+
+				<div class="grid-item featured-hotels1">
+					<img src="images/hotel11.jpg" alt="" class="hotel-image">
+					<h5 class="hotel-name">Lords Plaza</h5>
+					<span class="hotel-price">From: $250/Night</span>
+					<div class="hotel-rating">
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star rating"></i>
+						<i class="fas fa-star-half rating"></i>
+					</div>
+					<a href="#" class="btn btn-gradient">Book now
+					</a>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--contact-->
+	<section class="CT">
+		<h1>ABOUT CONTACTS</h1>
+		<p>If you face any difficulty regading Hotel booking and canclusion through our website please contact us.
+			surely we halp you. our contacts details give below.</p>
+		<h3>Email:- bookhotel00@gmail.com</h3>
+		<h3> Contact No :- 1234567890</h3>
+	</section>
+	<!--thankyou-->
+	<section class="TK">
+		<h2>Thank you for visiting our website...</h2>
+	</section>
+
+
+</body>
+
+</html>

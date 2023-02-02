@@ -1,0 +1,674 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: 'Poppins', sans-serif;
+}
+.content_home {
+	/* this is needed or the background will be offset by a few pixels at the top */
+	overflow: auto;
+	position: relative;
+  }
+  
+  .content_home::before {
+	content: "";
+	position: fixed;
+	left: 0;
+	right: 0;
+	z-index: -1;
+  
+    display: block;
+	background-image: linear-gradient(rgba(2,4.5,15,0.35),rgba(2,4.5,15,0.35)),url(images/hotal.jpg);
+	background-size:cover;
+	width: 100%;
+	height: 100%;
+  
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(2px);
+  }
+
+ 
+
+/*--page 1--*/
+.header{
+	min-height: 100vh;
+	width: 100%;
+	/* background-image: linear-gradient(rgba(2,4.5,15,0.35),rgba(2,4.5,15,0.35)),url(images/hotal.jpg); --home page image-- */
+	background-position: center;
+	background-size: cover;
+	position: relative;
+}
+
+nav{
+	display: flex;
+	padding: 2% 6%;
+	justify-content: space-between;
+	align-items: center;
+	height: 10px;
+}
+
+nav img{               /*--logo--*/
+     width: 150px;
+}
+.nav-links{                 /*--menu--*/
+	flex: 1;
+	text-align: right;
+}
+.nav-links ul li{
+	list-style: none;
+	display: inline-block;
+	padding: 8px 12px;
+	position: relative;
+}
+.nav-links ul li a{
+	color: #fff;
+	text-decoration: none;
+	font-size:  15px; 
+}
+.nav-links ul li::after{      /*--menu bar effects --*/
+	content: '';
+	width: 0%;
+	height: 2px;
+	background: #f44336;
+	display: block;
+	margin: auto;
+	transition: 0.3s;
+}
+.nav-links ul li:hover::after{
+	width: 100%;
+}
+.text-box{                           /*--web tital--*/
+	width: 90%;
+	color: #fff;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+	font-size: 62px;
+}
+.text-box p{
+	font-size: 30px;
+}
+.hero-btn{                          /*--visit us menu button effects--*/
+	display: inline-block;
+	text-decoration: none;
+	color: #fff;
+	border: 2px solid #fff;
+	padding: 9px 26px;
+	font-size: 17px;
+	background: transparent;
+	position: relative;
+	cursor: pointer;
+}
+.hero-btn:hover{
+	border: 1px solid #f44336;
+	background: #f44336;
+	transition: 1s;
+}
+
+nav .fa{
+	display: none;
+}
+
+@media(max-width: 700px)       /*--this code for mobile phone--*/
+{
+	.text-box h1{             /*--for hadding--*/
+		font-size: 20px;
+
+	}
+	.nav-links ul li {      /*--for menu bar and button--*/
+		display: block;
+	}
+	.nav-links{
+		position: absolute;
+		background: #1C2D49;
+		height: 100vh;
+		width: 200px;
+		top: 0;
+		right: -200px;
+		text-align: left;
+		z-index: 2;
+		transition: 1s;
+
+	}
+	nav .fa{
+		display: block;
+		color: #fff;
+		margin: 10px;
+		font-size: 22px;
+		cursor: pointer;
+	}
+	.nav-links ul{
+		padding: 30px;
+	}
+
+}
+/*--example--*/
+.example{
+	width: 100%;
+	margin: auto;
+	text-align: center;
+	background-color: #d2f6fe;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	border-radius: 5px;
+} 
+h1{                                       /*--page 2  heading--*/
+	font-size: 36px;
+	font-weight: 600;
+}
+p{
+	font-size: 14px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+
+.section-head{
+	text-align: center;
+	margin-bottom: 5rem;
+}
+.heading{
+	display: block;
+	font-size: 4rem;
+	text-transform: uppercase;
+	color: #fff;
+}
+.sub-heading{
+	font-size: 1.7rem;
+	font-family: 'Courgette',cursive;
+	font-weight: 300;
+	color: #fffafa;
+}
+ 
+.grid{
+	margin-top: 5%;
+	display: flex;
+	justify-content: center;
+	justify-content: space-between;
+}
+.grid1{
+	margin-top: 10px;
+	display: flex;
+	justify-content: center;
+	justify-content: space-between;
+}
+.grid-item{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: inherit;
+	height: inherit;
+}
+.featured-hotels{
+	color: rgb(246, 246, 252);
+	padding: 1rem;
+	position: relative;
+	margin-left: 10px;
+	width: 100%;
+	text-align: center;
+	background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+	border-radius: 3px;
+}
+.featured-hotels1{
+	color: rgb(255, 255, 255);
+	padding: 1rem;
+	position: relative;
+	margin-left: 10px;
+	text-align: center;
+	background-image: linear-gradient(rgba(0, 0, 255, 0.5), rgba(255, 255, 0, 0.5));
+	border-radius: 3px;
+	width: 19.5%;
+}
+.featured-hotels::before{
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: -2;
+	filter: blur(4px);
+}
+.hotel-image{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+	position: absolute;
+	border-radius: 5px;
+	top: 0;
+	box-shadow: 0px 1px 5px rgba(61, 40, 40, 0.87);
+	left: 0;
+	z-index: -1;
+	background-color: violet
+}
+.hotel-name{
+	font-size: 30px;
+}
+.hotel-price{
+	font-size: 30px;
+}
+.hotel-rating{
+	margin: 1rem 0 2.5rem;
+}
+.rating{
+	color: rgb(255, 255, 0);
+}
+.btn{
+	color: #fcfcfc;
+	width: 50%;
+	background-color: #070707;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+	font-size: 20px;
+	margin-left: 5%;
+}
+/*--contact--*/
+.CT{
+	margin: auto;
+	width: 100%;
+	background-color: #d2f6fe;
+    text-align: center;
+	padding-top: 10px;
+	margin-top: 10px;
+	border-radius: 5px;
+	padding-bottom: 40px;
+}
+h1{                                       /*--page 2  heading--*/
+	font-size: 40px;
+	font-weight: 600;
+}
+p{
+	font-size: 18px;
+	font-weight: 300;
+	line-height: 22px;
+	padding: 10px;
+}
+h3{
+	font-size: 15px;
+	font-weight: 350;
+	line-height: 16px;
+	padding: 5px;
+}
+/*--thankyou page--*/
+.TK{
+	margin: auto;
+	width: auto;
+	background-color: #FCFCFC;
+	margin-top: 10px;
+	border-radius: 5px;
+	text-align: center;
+	padding-top: 70px;
+	padding-bottom: 70px;
+	margin-bottom: 10px;
+}
+h2{  
+
+    font-family: 'Times', cursive;                                    /*--page 2  heading--*/
+	font-size: 50px;
+	font-weight: 700;
+
+
+}
+/*--serch bar--*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body{
+  background: #1492DE;
+  padding: 0 20px;
+}
+
+::selection{
+  color: #fff;
+  background: #664AFF;
+}
+
+.wrapper{
+  max-width: 450px;
+  margin: 150px auto;
+}
+
+.wrapper .search-input{
+  background: #fff;
+  width: 100%;
+  border-radius: 5px;
+  position: relative;
+  box-shadow: 0px 1px 5px 3px rgba(0,0,0,0.12);
+}
+
+.search-input input{
+  height: 55px;
+  width: 100%;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0 60px 0 20px;
+  font-size: 18px;
+  box-shadow: 0px 1px 5px rgba(0,0,0,0.1);
+}
+
+.search-input.active input{
+  border-radius: 5px 5px 0 0;
+}
+
+.search-input .autocom-box{
+  padding: 0;
+  opacity: 0;
+  pointer-events: none;
+  max-height: 280px;
+  overflow-y: auto;
+}
+
+.search-input.active .autocom-box{
+  padding: 10px 8px;
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.autocom-box li{
+  list-style: none;
+  padding: 8px 12px;
+  display: none;
+  width: 100%;
+  cursor: default;
+  border-radius: 3px;
+}
+
+.search-input.active .autocom-box li{
+  display: block;
+}
+.autocom-box li:hover{
+  background: #efefef;
+}
+
+.search-input .icon{
+  position: absolute;
+  right: 0px;
+  top: 0px;
+  height: 55px;
+  width: 55px;
+  text-align: center;
+  line-height: 55px;
+  font-size: 20px;
+  color: #1492DE;
+  cursor: pointer;
+}
+
+/*----------about us page -------*/
+
+.header1 img{
+    position: absolute;
+	background-size: cover;
+	height:100%;
+}
+
+.content_aboutas::before {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	z-index: -1;
+  
+	display: flex;
+	background-image: linear-gradient(rgba(2,4.5,15,0.35),rgba(2,4.5,15,0.35)),url(images/about.jpg);
+	margin-right: -2%;
+	background-size:cover;
+	width: 100%;
+	height: 100%;
+	-webkit-filter: blur(5px);
+	-moz-filter: blur(5px);
+	-o-filter: blur(5px);
+	-ms-filter: blur(5px);
+	filter: blur(2px);
+  }
+
+
+.about-us{
+   width: 80%;
+   margin: auto;
+   padding-top: 80px;
+   padding-bottom: 50px;
+}
+.row img{
+	border-radius: 5px;
+	margin-top: 30px;
+	width: 100%;
+}
+.about-col{
+   flex-basis: 48%;
+   padding: 30px;
+}
+.row h2
+{
+	color: rgb(20, 20, 20);
+	border-radius: 10px;
+	margin-left: 30%;
+	font-family: 'Arial', cursive;
+	text-decoration: underline;
+	text-decoration-color: black; 
+}
+.about-col p{
+	color: rgb(7, 7, 7);
+	/* background-image: linear-gradient(rgba(255, 153, 0, 0.596), rgba(212, 0, 255, 0.616)); */
+	background-size: cover;
+	width: 100%;
+	border-radius: 10px;
+	margin-left: 0%;
+	margin-top: 40px;
+	text-align: left;
+}
+
+/* Position text in the middle of the page/image */
+  .bg-text {
+	background-color: rgb(0, 0, 0); /* Fallback color */
+	background-color: rgba(0, 0, 0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 50%;
+	padding: 40px;
+	text-align: center;
+  }
+
+  /*----------contact page -------*/
+
+  .contact
+  {
+	position: static;
+	min-height: 100vh;
+	padding: 50px 100px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	background: url(images/contact.jpg);
+	background-size:cover;
+	margin-right: -2%;
+	margin-left: -2%;
+	margin-top: -4%;
+ }
+ .contact .content {
+	background-color: rgb(0,0,0); /* Fallback color */
+	background-color: rgba(0,0,0, 0.4); /* Black w/opacity/see-through */
+	color: white;
+	font-weight: bold;
+	border: 3px solid #f1f1f1;
+	position: absolute;
+	top: 25%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 2;
+	width: 50%;
+	padding: 40px;
+	text-align: center;
+  }
+ .container
+  {
+       width: 100%;
+	   display: flex;
+	   justify-content: center;
+	   align-items: center;
+	   margin-top: 30px;
+  }
+ .container .contactInfo
+  {
+	   width: 50%;
+	   display: flex;
+	   margin-top: 15%;
+	   flex-direction: column;
+  }
+   .container .contactInfo .box
+  {
+	position: relative;
+	padding: 20px 0;
+	display: flex;
+  }		
+ .container .contactInfo .box .icon
+  {
+	  min-width: 60px;
+	  height: 60px;
+	  background: rgb(255, 255, 255);
+	  display: flex;
+	  justify-content: center;
+	  align-items: center;
+	  border-radius: 50%;
+	  font-size: 22px;
+	  margin-left: 5%;
+  }  
+  .container .contactInfo .box .text
+  {
+	  display: flex;
+	  margin-left: 20px;
+	  font-size: 16px;
+	  color: rgb(255, 255, 255);
+	  flex-direction: column;
+	  font-weight: 300;
+  }
+  .container .contactInfo .box .text h3
+  {
+      font-weight: 500;
+	  color: #ffffff;
+	  text-align: left;
+  }
+  .contactForm
+  {
+	  width: 40%;
+	  padding: 40px;
+	  margin-top: 20%;
+	  background: rgb(255, 253, 253);
+	  margin-left: 10%;
+	  border-radius: 5px;
+  }
+  .contactForm h2
+  {
+       font-size: 30px;
+	   color: #333;
+	   font-weight: 500;
+  }
+  .contactForm .inputBox
+  {
+	  position: relative;
+	  width: 100%;
+	  margin-top: 10px;
+  }
+  .contactForm .inputBox input,
+  .contactForm .inputBox textarea
+  {
+	  width: 100%;
+	  padding: 5px 0;
+	  font-size: 16px;
+	  margin: 10px 0;
+	  border: none;
+	  border-bottom: 2px solid #333;
+	  outline: none;
+	  resize: none;
+  }
+  .contactForm .inputBox span
+  {
+	  position: absolute;
+	  left: 0;
+	  padding: 5px 0;
+	  font-size: 16px;
+	  margin: 10px 0;
+	  pointer-events: none;
+	  transition: 0.5s;
+	  color: #666;
+  }
+  .contactForm .inputBox input:focus ~ span,
+  .contactForm .inputBox input:valid ~ span,
+  .contactForm .inputBox textarea:focus ~ span,
+  .contactForm .inputBox textarea:valid ~ span
+  {
+	  color: #e91e63;
+	  font-size: 12px;
+	  transform: translateY(-20px);
+  }
+  .contactForm .inputBox input[type="Submit"]
+  {
+	  width: 100px;
+	  background: #05707e;
+	  color: #fff;
+	  border: none;
+	  cursor: pointer;
+	  padding: 10px;
+	  font-size: 18px;
+	  border-radius: 5px;
+}
+  @media(max-width: 991px)
+  {
+	  .contact
+	  {
+		  padding: 50px;
+	  }
+	  .container
+	  {
+		  flex-direction: column;
+	  }
+	  .container .contactInfo
+	  {
+		  margin-bottom: 40px;
+	  }
+	  .container .contactInfo
+	  {
+		  width : 100%;
+	  }
+  }
+
+  /* Gallery Page */
+
+.row h1{
+	text-align: center;
+	color: rgb(8, 8, 8);
+	background-image: linear-gradient(rgba(255, 0, 0, 0.705), rgba(255, 255, 0, 0.637));
+	width: 30%;
+	margin-left: 35%;
+	margin-top: 10px;
+}
+.row .column img{
+	border: 1px solid #ddd;
+	border-radius: 4px;
+	padding: 10px;
+	background-color: #070707;
+	margin-top: 10px;
+	margin-left: 30px;
+	width: 450px;
+  }
